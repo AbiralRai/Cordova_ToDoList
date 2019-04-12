@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+    padding: 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.todolist {
+    color: #6F808C;
+    height: 60px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.icon-add {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #6F808C;
+    width: 40px;
+    height: 60px;
+    border: 3px solid transparent;
+}
+
+.ic {
+    text-rendering: auto;
+}
+
+
+/* * {
+    padding: 0px;
+    margin: 0px;
+}
+
+h2,
+body {
+    font-family: 'Gaegu';
+}
+
+.app {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+#headerContainer {
+    text-align: left;
+    letter-spacing: .5px;
+    padding-left: 10px;
+}
+
+.app h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#inputArea {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#userInput {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#addItemBtn {
+    margin-left: 5px;
+    padding: 10px;
+}
+
+#list-container {
+    border-top: 1px solid #fff;
+    margin: 5px auto;
+    width: 400px;
+    height: 100%;
+}
+
+#list {
+    list-style-type: none;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.listStyle {
+    color: white;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 2px;
+    padding: 10px;
+    background-color: rgb(4, 51, 145);
+    border-radius: 5px;
+    position: relative;
+}
+
+.listStyle:hover {
+    background-color: rgba(4, 51, 145, .9);
+}
+
+.done {
+    text-decoration: line-through;
+    background-color: rgba(4, 51, 145, .5);
+}
+
+.emptyList {
+    font-size: 2em;
+    width: 250px;
+}
+
+.unEmptyList {
+    display: none;
+}
+
+.delBtnStyle {
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0px;
+}
+
+.delBtnStyle:focus {
+    box-shadow: none;
+    outline: none;
+} */

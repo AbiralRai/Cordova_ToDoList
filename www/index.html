@@ -8,6 +8,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Hello World</title>
 </head>
@@ -15,7 +18,24 @@
 <body>
     <div class="app">
 
-        <h1>Todo List</h1>
+        <header class="header">
+            <div class="current-date"></div>
+        </header>
+
+        <main class="main-section">
+
+            <div class="main-section__container">
+                <ul class="to-do-list-ul">
+                    <h2 class="main-section_h2">Empty List</h2>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <input type="add" class="todolist" placeholder="What we have to do?">
+            <button class="btn icon-add"><i class="fas fa-plus fa-3x" style="text-rendering: auto;"></i></button>
+        </footer>
+
 
     </div>
     <script type="text/javascript" src="cordova.js"></script>
@@ -23,3 +43,17 @@
 </body>
 
 </html>
+
+<!-- <div id="headerContainer"></div>
+        <h1>Todo List</h1>
+        <div id="inputArea">
+            <input type="text" placeholder="Add new item " id="userInput">
+            <button id="addItemBtn"> Add item </button>
+        </div>
+        <div id="list-container">
+            <ul id="list">
+                <h2 class="emptyList">
+                    Empty List
+                </h2>
+            </ul>
+        </div> -->

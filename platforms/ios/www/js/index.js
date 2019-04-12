@@ -1,46 +1,99 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
+document.addEventListener('deviceready', init);
+const date = new Date();
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+function init() {
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    const btn = document.getElementById('addItemBtn');
 
-        console.log('Received Event: ' + id);
+    currentDate();
+}
+
+
+const currentDate = () => {
+
+    getDay();
+    getMonth();
+    const getDate = date.getDate();
+
+    const headerContainer = document.querySelector('.current-date');
+    const headerDate = `
+        <h3>${getDay() + ' ' + getMonth() + ' ' + getDate}</h3>
+    `;
+    headerContainer.innerHTML = headerDate;
+
+}
+
+const getDay = () => {
+    switch (date.getDay()) {
+
+        case 0:
+            return "SUNDAY"
+            break;
+        case 1:
+            return "MONDAY"
+            break;
+        case 2:
+            return "TUESDAY"
+            break;
+        case 3:
+            return "WEDNESDAY"
+            break;
+        case 4:
+            return "THURSDAY"
+            break;
+        case 5:
+            return "FRIDAY"
+            break;
+        case 6:
+            return "SATURDAY"
+            break;
+
+        default:
+            break;
     }
-};
+}
+const getMonth = () => {
+    switch (date.getMonth()) {
 
-app.initialize();
+        case 0:
+            return "January"
+            break;
+        case 1:
+            return "February"
+            break;
+        case 2:
+            return "March"
+            break;
+        case 3:
+            return "April"
+            break;
+        case 4:
+            return "May"
+            break;
+        case 5:
+            return "June"
+            break;
+        case 6:
+            return "July"
+            break;
+        case 7:
+            return "August"
+            break;
+        case 8:
+            return "September"
+            break;
+        case 9:
+            return "October"
+            break;
+        case 10:
+            return "November"
+            break;
+        case 11:
+            return "December"
+            break;
+
+        default:
+            break;
+    }
+}
