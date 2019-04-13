@@ -1,16 +1,45 @@
 document.addEventListener('deviceready', init);
 const date = new Date();
 
+const addTask = document.querySelector('.footer__icon-add');
+const userListInput = document.querySelector('.todolist');
+const ul = document.querySelector('.main__list--ul');
 
 function init() {
 
-    const btn = document.getElementById('addItemBtn');
+    addTask.addEventListener('click', createListElement);
+    currentTime();
+}
 
-    currentDate();
+function userInputLength() {
+    return userListInput.value.length;
+}
+
+function checkList() {
+    return document.querySelectorAll('li').length;
+}
+
+function createListElement() {
+    const h2 = document.querySelector('.emptyList');
+    const li = document.createElement('li');
+
+    li.append(document.createTextNode(userListInput.value));
+    ul.append(li);
+    li.addEventListener("click", toggleList);
+    userListInput.value = "";
+
+    function toggleList() {
+        li.classList.toggle("done");
+    }
+
+    if (checkList() > 0) {
+        h2.classList.add("notEmptyList");
+    }
+
 }
 
 
-const currentDate = () => {
+const currentTime = () => {
 
     getDay();
     getMonth();

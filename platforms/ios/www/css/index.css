@@ -12,8 +12,33 @@ body {
     padding: 30px;
 }
 
+.main {
+    border: 2px solid #777;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 2em;
+}
+
+.done {
+    text-decoration: line-through;
+    /* background-color: rgba(4, 51, 145, .5); */
+}
+
+.emptyList {
+    font-size: 2em;
+}
+
+.notEmptyList {
+    display: none;
+}
+
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -31,10 +56,10 @@ body {
     padding-left: 10px;
 }
 
-.icon-add {
+.footer__icon-add {
     position: absolute;
     top: 10px;
-    right: 50%;
+    right: 10px;
     background: transparent;
     color: #6F808C;
     width: 40px;
