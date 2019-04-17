@@ -1,6 +1,11 @@
-document.addEventListener('deviceready', init);
-const date = new Date();
+//
 
+
+document.addEventListener('deviceready', init);
+// document.addEventListener("pause", onPause);
+// document.addEventListener("resume", onResume);
+
+const date = new Date();
 const addTask = document.querySelector('.footer__icon-add');
 const userListInput = document.querySelector('.todolist');
 const ul = document.querySelector('.main__list--ul');
@@ -9,7 +14,17 @@ function init() {
 
     addTask.addEventListener('click', createListElement);
     currentTime();
+
 }
+
+// function onPause() {
+//     console.log("Paused");
+// }
+
+// function onResume() {
+//     console.log("resume");
+// }
+
 
 function userInputLength() {
     return userListInput.value.length;

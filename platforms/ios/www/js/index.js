@@ -1,6 +1,6 @@
 document.addEventListener('deviceready', init);
-const date = new Date();
 
+const date = new Date();
 const addTask = document.querySelector('.footer__icon-add');
 const userListInput = document.querySelector('.todolist');
 const ul = document.querySelector('.main__list--ul');
@@ -9,7 +9,10 @@ function init() {
 
     addTask.addEventListener('click', createListElement);
     currentTime();
+
 }
+
+
 
 function userInputLength() {
     return userListInput.value.length;
