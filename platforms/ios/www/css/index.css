@@ -10,6 +10,7 @@ body {
     line-height: 1.7;
     font-size: 16px;
     padding: 30px;
+    background: #ccc;
 }
 
 .main {
@@ -38,10 +39,15 @@ li {
 }
 
 .footer {
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
+    width: 100%;
+}
+
+.ui-header .ui-btn,
+.ui-footer .ui-btn {
     width: 100%;
 }
 
@@ -57,14 +63,15 @@ li {
 }
 
 .footer__icon-add {
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    right: 10px;
-    background: transparent;
+    right: 10px; */
+    /* background: transparent;
     color: #6F808C;
     width: 40px;
     height: 60px;
-    border: 3px solid transparent;
+    border: 3px solid transparent; */
+    display: block;
 }
 
 

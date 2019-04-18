@@ -22,7 +22,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         const addTask = document.querySelector('.footer__icon-add');
-        addTask.addEventListener('click', app.createListElement);
+        // addTask.addEventListener('click', app.createListElement);
         // currentTime();
         app.currentTime();
     },
@@ -139,6 +139,20 @@ var app = {
 
 };
 app.initialize();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // document.addEventListener('deviceready', init);
 
 // const addTask = document.querySelector('.footer__icon-add');
