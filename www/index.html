@@ -41,12 +41,37 @@
         </div>
 
         <div data-role="content">
-            <h1>content</h1>
-            <a href="#" class="ui-btn">Button</a>
+            <!-- <div role="main" class="ui-content"> -->
+            <ul id="list" class="main__list--ul touch" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search list..." data-icon="false" data-split-icon="delete">
+                <!-- <li>
+                    <a href="#">
+                        <p>Test1</p>
+                    </a>
+                    <a href="#" class="delete">Delete</a>
+                </li> -->
+            </ul>
         </div>
+        <!-- Content -->
+
+        <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+
+            <p id="question">Are you sure you want to delete:</p>
+
+            <div class="ui-grid-a">
+
+                <div class="ui-block-a">
+                    <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                </div>
+
+                <div class="ui-block-b">
+                    <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <!-- /popup -->
 
         <div data-role="footer" data-position="fixed" class="footer" data-tap-toggle="false">
-            <a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus footer__icon-add "><input type="text" class="todolist" placeholder="What we have to do?"></a>
+            <a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus footer__icon-add "><input type="Go" class="todolist" placeholder="What we have to do?"></a>
             <div data-role="navbar">
                 <ul>
                     <li><a href="#page" data-icon="check">Tasks</a></li>
@@ -63,7 +88,6 @@
         <div data-role="header">
             <div class="current-date"></div>
         </div>
-
         <div data-role="content">
             <h1>Page 2</h1>
         </div>
@@ -79,24 +103,10 @@
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 
 </body>
 
 </html>
-
-<!-- <div id="headerContainer"></div>
-        <h1>Todo List</h1>
-        <div id="inputArea">
-            <input type="text" placeholder="Add new item " id="userInput">
-            <button id="addItemBtn"> Add item </button>
-        </div>
-        <div id="list-container">
-            <ul id="list">
-                <h2 class="emptyList">
-                    Empty List
-                </h2>
-            </ul>
-        </div> -->
