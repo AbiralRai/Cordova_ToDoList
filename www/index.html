@@ -18,22 +18,6 @@
 
 <body>
 
-    <!-- <header class="header">
-        <div class="current-date"></div>
-    </header>
-
-    <main class="main">
-        <ul class="main__list--ul">
-            <h2 class="emptyList">Empty List</h2>
-        </ul>
-
-    </main>
-
-    <footer data-role="footer" data-position="fixed" class="footer">
-        
-        <a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus footer__icon-add "><input type="text" class="todolist" placeholder="What we have to do?"></a>
-     
-    </footer> -->
 
     <div data-role="page" id="page">
         <div data-role="header">
@@ -41,15 +25,10 @@
         </div>
 
         <div data-role="content">
-            <!-- <div role="main" class="ui-content"> -->
             <ul id="list" class="main__list--ul touch" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search list..." data-icon="false" data-split-icon="delete">
-                <!-- <li>
-                    <a href="#">
-                        <p>Test1</p>
-                    </a>
-                    <a href="#" class="delete">Delete</a>
-                </li> -->
+
             </ul>
+            <button id="button"> Clear all</button>
         </div>
         <!-- Content -->
 
@@ -71,34 +50,15 @@
         <!-- /popup -->
 
         <div data-role="footer" data-position="fixed" class="footer" data-tap-toggle="false">
-            <a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus footer__icon-add "><input type="Go" class="todolist" placeholder="What we have to do?"></a>
+            <a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus footer__icon-add ">
+                <input type="Text" class="todolist" placeholder="What we have to do?">
+            </a>
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#page" data-icon="check">Tasks</a></li>
-                    <li><a href="#page2" data-icon="calendar">Calendar</a></li>
+                    <li><a href="#page" data-icon="check">To Do List</a></li>
                 </ul>
             </div>
             <!-- /navbar -->
-        </div>
-    </div>
-    <!-- /Home Page -->
-
-    <!-- Second page -->
-    <div data-role="page" id="page2">
-        <div data-role="header">
-            <div class="current-date"></div>
-        </div>
-        <div data-role="content">
-            <h1>Page 2</h1>
-        </div>
-
-        <div data-role="footer" data-position="fixed" class="footer" data-tap-toggle="false">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#page" data-icon="check">Tasks</a></li>
-                    <li><a href="#page2" data-icon="calendar">Calendar</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 
@@ -106,6 +66,7 @@
     <script type="text/javascript" src="js/jquery/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
 
 </body>
 
