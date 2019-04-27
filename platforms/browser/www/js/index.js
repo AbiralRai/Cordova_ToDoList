@@ -7,6 +7,8 @@ $(document).ready(function() {
     const clsButton = document.querySelector('#button');
     const input = document.querySelector('.todolist');
 
+    const location = document.querySelector('.geoCoordinate');
+
     let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
     localStorage.setItem('items', JSON.stringify(itemsArray));
@@ -29,13 +31,16 @@ $(document).ready(function() {
                     app.createListElement(item);
             });
             app.currentTime();
+            location.textContent = getPosition();
+
 
         },
         onPause: function() {
             console.log("Device on pause");
         },
         onResume: function() {
-            console.log("Device on resume");
+            // console.log("Device on resume");
+            alert("Welcome back, Let's kill this task!");
         },
         // Update DOM on a Received Event
         receivedEvent: function(id) {
@@ -205,15 +210,6 @@ $(document).ready(function() {
                         // ...the list will be refreshed and the temporary class for border styling removed
                         $("#list").listview("refresh").find(".border-bottom").removeClass("border-bottom");
 
-                        localStorage.removeItem(listitem.value);
-
-                        // let items = getItems();
-                        // let index = items.indexOf(listitem);
-                        // console.log('index', index);
-                        // console.log('items', items);
-                        // console.log('listitem', listitem);
-                        // clearThisItem(listitem);
-
                     })
                     // During the transition the previous button gets bottom border
                     .prev("li").children("a").addClass("border-bottom")
@@ -233,32 +229,27 @@ $(document).ready(function() {
         });
     };
 
-    function getItems() {
-        let itemStr = localStorage.getItem('items');
-        if (itemStr) {
-            return JSON.parse(itemStr);
-        }
-        return null;
-    }
-
-    function removeItem(item) {
-        let items = getItems();
-        let index = items.indexOf(item);
-        console.log('item', item);
-        console.log('items', items);
-        console.log('index', index);
-        if (index > -1) {
-            items.splice(index, 1);
-        }
-        // app.storeList(item);
-        console.log('item', item);
-        console.log('items', items);
-        console.log('index', index);
-    }
-
-    function clearThisItem(item) {
-        removeItem(item);
-    }
-
-
 });
+
+function getPosition() {
+    var options = {
+        enableHighAccuracy: true,
+        maximumAge: 3600000
+    }
+    var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+
+    function onSuccess(position) {
+        alert('Latitude: ' + position.coords.latitude + '\n' +
+            'Longitude: ' + position.coords.longitude + '\n' +
+            'Altitude: ' + position.coords.altitude + '\n' +
+            'Accuracy: ' + position.coords.accuracy + '\n' +
+            'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+            'Heading: ' + position.coords.heading + '\n' +
+            'Speed: ' + position.coords.speed + '\n' +
+            'Timestamp: ' + position.timestamp + '\n');
+    };
+
+    function onError(error) {
+        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+    }
+}

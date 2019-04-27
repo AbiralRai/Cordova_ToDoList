@@ -7,6 +7,8 @@ $(document).ready(function() {
     const clsButton = document.querySelector('#button');
     const input = document.querySelector('.todolist');
 
+    const location = document.querySelector('.geoCoordinate');
+
     let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
     localStorage.setItem('items', JSON.stringify(itemsArray));
@@ -29,13 +31,16 @@ $(document).ready(function() {
                     app.createListElement(item);
             });
             app.currentTime();
+            location.textContent = getPosition();
+
 
         },
         onPause: function() {
             console.log("Device on pause");
         },
         onResume: function() {
-            console.log("Device on resume");
+            // console.log("Device on resume");
+            alert("Welcome back, Let's kill this task!");
         },
         // Update DOM on a Received Event
         receivedEvent: function(id) {
@@ -223,29 +228,5 @@ $(document).ready(function() {
             $("#confirm #yes").off();
         });
     };
-
-    // function getItems() {
-    //     let itemStr = localStorage.getItem('items');
-    //     if (itemStr) {
-    //         return JSON.parse(itemStr);
-    //     }
-    //     return null;
-    // }
-
-    // function removeItem(item) {
-    //     let items = getItems();
-    //     let index = items.indexOf(item);
-    //     console.log('item', item);
-    //     console.log('items', items);
-    //     console.log('index', index);
-    //     if (index > -1) {
-    //         items.splice(index, 1);
-    //     }
-    // }
-
-    // function clearThisItem(item) {
-    //     removeItem(item);
-    // }
-
 
 });

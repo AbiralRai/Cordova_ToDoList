@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background: #fff !important;
 }
 
 body {
@@ -10,7 +11,17 @@ body {
     line-height: 1.7;
     font-size: 16px;
     padding: 30px;
-    background: #ccc;
+}
+
+.current-date {
+    margin-top: 1.5em;
+    letter-spacing: 0.5px;
+    margin-left: 1.5em;
+    display: inline-block;
+}
+
+.geoCoordinate {
+    display: inline-block;
 }
 
 .main {
@@ -27,15 +38,8 @@ li {
 
 .done {
     text-decoration: line-through;
-    /* background-color: rgba(4, 51, 145, .5); */
-}
-
-.emptyList {
-    font-size: 2em;
-}
-
-.notEmptyList {
-    display: none;
+    transition: all 0.5s ease !important;
+    color: #d5d6e1 !important;
 }
 
 .ui-header .ui-btn,
@@ -124,100 +128,26 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 }
 
 
-/* * {
-    padding: 0px;
-    margin: 0px;
+/* Custom Jquery Mobile */
+
+.ui-content {
+    padding: 0em 1em;
 }
 
-h2,
-body {
-    font-family: 'Gaegu';
-}
-
-.app {
-    margin-top: 20px;
-    padding-top: 20px;
-}
-
-#headerContainer {
-    text-align: left;
-    letter-spacing: .5px;
-    padding-left: 10px;
-}
-
-.app h1 {
-    text-align: center;
-    margin-top: 1em;
-}
-
-#inputArea {
-    width: 90%;
-    margin: 0px auto;
-    text-align: center;
-}
-
-#userInput {
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-#addItemBtn {
-    margin-left: 5px;
-    padding: 10px;
-}
-
-#list-container {
-    border-top: 1px solid #fff;
-    margin: 5px auto;
-    width: 400px;
-    height: 100%;
-}
-
-#list {
-    list-style-type: none;
-    margin: 5px auto;
-    text-align: center;
-}
-
-.listStyle {
-    color: white;
-    width: 200px;
-    margin-left: 20px;
-    margin-top: 2px;
-    padding: 10px;
-    background-color: rgb(4, 51, 145);
-    border-radius: 5px;
-    position: relative;
-}
-
-.listStyle:hover {
-    background-color: rgba(4, 51, 145, .9);
-}
-
-.done {
-    text-decoration: line-through;
-    background-color: rgba(4, 51, 145, .5);
-}
-
-.emptyList {
-    font-size: 2em;
-    width: 250px;
-}
-
-.unEmptyList {
-    display: none;
-}
-
-.delBtnStyle {
-    border: none;
-    background: transparent;
-    position: absolute;
-    right: 0px;
-}
-
-.delBtnStyle:focus {
+.ui-input-search.ui-shadow-inset.ui-input-has-clear.ui-body-inherit.ui-corner-all {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
-    outline: none;
-} */
+    padding: 4px;
+}
+
+.ui-input-search:after {
+    left: 0.61em;
+}
+
+
+/* List item padding */
+
+.ui-listview>.ui-li-static {
+    padding: .1em 1em;
+}
