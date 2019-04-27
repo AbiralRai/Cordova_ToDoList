@@ -17,11 +17,6 @@ body {
     margin-top: 1.5em;
     letter-spacing: 0.5px;
     margin-left: 1.5em;
-    display: inline-block;
-}
-
-.geoCoordinate {
-    display: inline-block;
 }
 
 .main {
