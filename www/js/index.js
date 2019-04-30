@@ -31,7 +31,6 @@ $(document).ready(function() {
                     app.createListElement(item);
             });
             app.currentTime();
-            location.textContent = getPosition();
 
 
         },
