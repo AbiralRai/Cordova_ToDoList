@@ -7,7 +7,6 @@ $(document).ready(function() {
     const clsButton = document.querySelector('#button');
     const input = document.querySelector('.todolist');
 
-    const location = document.querySelector('.geoCoordinate');
 
     let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
@@ -31,7 +30,6 @@ $(document).ready(function() {
                     app.createListElement(item);
             });
             app.currentTime();
-            location.textContent = getPosition();
 
 
         },
