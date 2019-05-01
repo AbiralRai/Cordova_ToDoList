@@ -30,6 +30,10 @@ $(document).ready(function() {
                     app.createListElement(item);
             });
             app.currentTime();
+<<<<<<< HEAD
+=======
+            app.getWeatherLocation();
+>>>>>>> development
 
 
         },
@@ -73,6 +77,54 @@ $(document).ready(function() {
             while (ul.firstChild) {
                 ul.removeChild(ul.firstChild)
             };
+        },
+        getWeatherLocation: function() {
+            navigator.geolocation.getCurrentPosition(app.onWeatherSuccess, app.onWeatherError, { enableHighAccuracy: true });
+        },
+        onWeatherSuccess: function(position) {
+            let Latitude = position.coords.latitude;
+            let Longitude = position.coords.longitude;
+            app.getWeather(Latitude, Longitude);
+        },
+        getWeather: function(latitude, longitude) {
+            var OpenWeatherAppKey = "279445cc97b3857f6ffc10ece820df05";
+            const getGeolocation = document.querySelector('.geolocation');
+
+            var queryString =
+                'http://api.openweathermap.org/data/2.5/weather?lat=' +
+                latitude + '&lon=' + longitude + '&appid=' + OpenWeatherAppKey + '&units=metric';
+
+            $.getJSON(queryString, function(results) {
+
+                if (results.weather.length) {
+
+                    $.getJSON(queryString, function(results) {
+
+                        if (results.weather.length) {
+                            // alert(Math.round(results.main.temp));
+                            getGeolocation.textContent = `${results.name} + ' ' + ${Math.round(results.main.temp)} + C`;
+
+                            // $('#description').text(results.name);
+                            // $('#temp').text(results.main.temp);
+                            // $('#wind').text(results.wind.speed);
+                            // $('#humidity').text(results.main.humidity);
+                            // $('#visibility').text(results.weather[0].main);
+
+                            // var sunriseDate = new Date(results.sys.sunrise);
+                            // $('#sunrise').text(sunriseDate.toLocaleTimeString());
+
+                            // var sunsetDate = new Date(results.sys.sunrise);
+                            // $('#sunset').text(sunsetDate.toLocaleTimeString());
+                        }
+
+                    });
+                }
+            }).fail(function() {
+                console.log("error getting location");
+            });
+        },
+        onWeatherError: function(error) {
+            console.log('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
         },
         currentTime: function() {
             app.getDay();
