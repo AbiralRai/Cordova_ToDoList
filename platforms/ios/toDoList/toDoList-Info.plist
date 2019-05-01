@@ -52,5 +52,9 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need location data to display reliable content to the user.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need location data to display reliable content to the user.</string>
 </dict>
 </plist>
